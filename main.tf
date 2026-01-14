@@ -28,7 +28,7 @@ resource "aws_iam_role" "github_oidc_role" {
           StringLike = {
             # 🔒 LOCK THIS DOWN: Replace with your actual username/repo
             # Example: "repo:iftekharchowdhury/my-project:*"
-            "token.actions.githubusercontent.com:sub": "repo:iftekharchowdhury/aws-oidc-demo:*"
+            "token.actions.githubusercontent.com:sub": "repo:iftekharchowdhury/*"
           }
           StringEquals = {
             "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
